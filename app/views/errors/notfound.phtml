@@ -1,0 +1,30 @@
+<?php $this->layout('layout', ['title' => $title ]) ?>
+
+<script type="text/javascript">
+    $(window).load(function () {
+
+        const delay = 5800;
+        var seconds = Math.floor(delay/1000);
+
+        document.getElementById('timer').innerText = seconds;
+
+        window.setTimeout(function () {
+            CORE.goTo('/');
+        }, delay);
+
+        window.setInterval(function () {
+
+            document.getElementById('timer').innerText = seconds;
+
+            seconds--;
+
+        }, Math.ceil(950));
+    });
+</script>
+
+
+<h1 id="unsubscribe">
+    <div id="formSuccess" style="font-size: 0.85em!important;">
+        Страница не найдена! Переход на главную через <code id="timer">0</code>
+    </div>
+</h1>

@@ -1,0 +1,46 @@
+{
+    "name": "karpoffS/standalone-microcmf",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sergey",
+            "email": "karpoff.sm@yandex.ru",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "psr/log": "^1.0",
+        "league/container": "^2.4",
+        "zendframework/zend-diactoros": "^1.4",
+        "corneltek/pux": "^1.6",
+        "corneltek/universal-cache": "^3.3",
+        "league/plates": "^3.3",
+        "teresko/palladium": "^1.2",
+        "corneltek/validationkit": "^1.1",
+        "corneltek/sqlbuilder": "^4.0",
+        "corneltek/webserver-runner": "^0.0.1",
+        "corneltek/sessionkit": "^1.1",
+        "psr/http-message": "^1.0",
+        "filp/whoops": "^2.1",
+        "twbs/bootstrap": "^3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2"
+    },
+    "scripts": {
+        "start": "php -S 127.0.0.1:8000 -t ./web",
+        "test": "phpunit"
+    }
+}

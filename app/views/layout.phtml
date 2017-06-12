@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title><?=$this->e($title)?></title>
+
+    <script type="text/javascript" src="/src/lib/JQuery/jquery.min.js"></script>
+    <script type="text/javascript" src="/src/js/core.js"></script>
+
+    <?=$this->section('stylesheets')?>
+
+    <?=$this->section('scripts')?>
+
+</head>
+<body>
+
+<?php $this->insert('partials/header') ?>
+
+<?=$this->section('content')?>
+
+<?php $this->insert('partials/footer') ?>
+
+</body>
+</html>
