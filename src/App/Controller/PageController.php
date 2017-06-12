@@ -28,6 +28,8 @@ class PageController extends Controller
         /** @var UniversalCache $cacher */
         $cacher = $this->container->get('cacheFront');
 
+//        throw new \Exception("Test");
+
         if($page = $cacher->tryGet($key)){
 
             return $this->responseHtml($page);
