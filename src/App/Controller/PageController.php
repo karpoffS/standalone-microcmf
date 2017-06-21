@@ -23,18 +23,16 @@ class PageController extends Controller
      */
     public function indexAction() {
 
-        $key = $this->genKeyName(__FUNCTION__, __NAMESPACE__);
-
-        /** @var UniversalCache $cacher */
-        $cacher = $this->container->get('cacheFront');
-
-//        throw new \Exception("Test");
-
-        if($page = $cacher->tryGet($key)){
-
-            return $this->responseHtml($page);
-
-        } else {
+//        $key = $this->genKeyName(__FUNCTION__, __NAMESPACE__);
+//
+//        /** @var UniversalCache $cacher */
+//        $cacher = $this->container->get('cacheFront');
+//
+//        if($page = $cacher->tryGet($key)){
+//
+//            return $this->responseHtml($page);
+//
+//        } else {
 
             $data = [
                 'title' => "Главна страница!",
@@ -42,10 +40,10 @@ class PageController extends Controller
 
             $page = $this->views->render("public::index", $data);
 
-            $cacher->set($key, $page, 60);
+//            $cacher->set($key, $page, 60);
 
             return $this->responseHtml($page);
-        }
+//        }
 
     }
 

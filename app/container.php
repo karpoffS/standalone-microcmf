@@ -80,13 +80,24 @@ $container->share( "db", function () use (&$container){
 $container->share("cache", function (){
 
     $backends = [];
+    
+    $rfiled = false;
 
     if(class_exists("Redis")){
-        $conn = new Redis();
+		
+        $conn = new \Redis();
+        
         if($conn && $conn->connect("127.0.0.1", 6379, 3)){
             $backends[] = new UniversalCache\RedisCache($conn);
-        }
-    }
+        } else $rfiled = true;
+        
+    } else $rfiled = true;
+    
+    if($rfiled){
+		$dir = APP_CACHE.DIRECTORY_SEPARATOR."backennd".DIRECTORY_SEPARATOR;
+
+		$backends[] = new UniversalCache\FileSystemCache($dir);
+	}
 
     // Подключаем универсальный кешер
     return new UniversalCache\UniversalCache($backends);

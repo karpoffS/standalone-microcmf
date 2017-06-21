@@ -1,4 +1,8 @@
 .idea/*
+/composer.phar
+/composer.lock
 app/logs/*
 app/cache/*
 /vendor/*
+/bower_components
+
