@@ -11,64 +11,6 @@
  */
 $router = new Pux\Mux();
 
-//$default_route = [
-//    'options' => [
-//        'constructor_args' => [ &$container ],
-//    ]
-//];
-//
-//$routes = [
-//    [
-//        'pattern' => "/",
-//        'controller' => \App\Controller\PageController::class,
-//        'action' => "indexAction",
-//        'options' => [
-//            'constructor_args' => [ &$container ],
-//        ]
-//    ],
-//    [
-//        'pattern' => "/first",
-//        'controller' => \App\Controller\PageController::class,
-//        'action' => "firstAction",
-//        'options' => [
-//            'constructor_args' => [ &$container ],
-//        ]
-//    ],
-//    [
-//        'pattern' => "/second",
-//        'controller' => \App\Controller\PageController::class,
-//        'action' => "secondAction",
-//        'options' => [
-//            'constructor_args' => [ &$container ],
-//        ]
-//    ],
-//
-//    [
-//        'pattern' => "/notfound",
-//        'controller' => \App\Controller\ErrorsController::class,
-//        'action' => "error404Action",
-//        'options' => [
-//            'constructor_args' => [ &$container ],
-//        ]
-//    ],
-//];
-//
-//foreach ($routes as $route) {
-//
-//    if(empty($route['options']))
-//        $route['options'] = $default_route['options'];
-//
-//    if (!empty($route['options']) && is_array($route['options']))
-//        $route['options'] =
-//            array_merge_recursive($default_route['options'], $route['options']);
-//
-//    $router->get(
-//        $route['pattern'],
-//        [ $route['controller'],$route['action']], // callback
-//        $route['options'] // options
-//    );
-//}
-
 //
 //$router->get('/', [ \App\Controller\PageController::class,'indexAction'], [
 //    'constructor_args' => [ &$container ],
