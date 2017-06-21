@@ -1,0 +1,7 @@
+driver: mysql
+directory: /home/sergey/Projects/standalone-microcmf/schemas/
+environments:
+    localhost:
+        host: 127.0.0.1
+        user: root
+        pass: ''
